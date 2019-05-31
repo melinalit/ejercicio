@@ -1,20 +1,22 @@
-let button =  document.querySelector("button")
-let body = document.querySelector("body")
+let btn =  document.querySelector("button")
+let body = document.querySelector ("body")
 
-function crearParrafo(){
-    Var parrafo = document.createElement("p")
-    parrafo.innerText = "Lorem ipsum";
+btn.addEventListener("click", hacerClick)
+function hacerClick(){
+    let div = document.createElement("div")
+    let p = document.createElement("p")
+    let btn_nuevo = document.createElement("button")
 
-    let nuevoDiv = document.createElement("div")
-    body.appendChild(nuevoDiv);
+    p.innerText="Lorem Ipsum"
+    btn_nuevo.innerText="Borrar"
+    btn_nuevo.addEventListener("click", borrarElemento)
 
-    let boton2 = document.createElement("button")
-    boton2.innerText = "Vaciar";
+    function borrarElemento() {
+        document.body.removeChild(div)
+    }
 
-    nuevoDiv.appendChild(boton)
-    nuevoDiv.insertBefore(parrafo, boton2)
-    
+    div.appendChild(p)
+    div.appendChild(btn_nuevo)
+    document.body.appendChild(div)
+
 }
-
-boton.addEventListener("click",crearParrafo)
-

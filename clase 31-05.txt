@@ -1,0 +1,13 @@
+
+Clase 31/05
+Objeto evento: es un objeto que te llega como primer parametro de cualquier funcion
+(Callback) registrada en un evento
+Ej:
+
+function borrarElemento (e){
+    document.body.removeChild
+    (e.target.parentNode)
+}
+
+event.target: es una referencia al nodo que acaba de disparar el evento
+parentNode: es una refrencia al nodo padre  
